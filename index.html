@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar App</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form>
+        <div id="list1" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Select Displayed Calenders</span>
+            <ul id = "checkbox-list" class="items">
+              <li><input type="checkbox" />Default </li>
+
+            </ul>
+          </div>
+             <input type="button" onclick="openCreateCalender()" />Create New Calender
+      </form>
+    <div class="form-popup" id="createCalender">
+        <form class="form-container">
+            <h1>Create New Calender</h1>
+
+            <label for="calenderName"><b>Name</b></label>
+            <input type="text" placeholder="Ex: Tony's Calender" id="newCalenderName" name="newCalenderName"required>
+
+            <button type="button" class="btn" onclick="createCalender(); closeCreateCalender();">Confirm</button>
+            <button type="button" class="btn cancel" onclick="closeCreateCalender()">Cancel</button>
+        </form>
+    </div>
+        
+    <script src="./script.js"></script>
+  </body>
+</html>
